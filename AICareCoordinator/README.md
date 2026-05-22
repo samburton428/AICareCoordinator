@@ -47,28 +47,6 @@ Marcus is experiencing chest tightness and shortness of breath after climbing st
 - Receives routing to the appropriate care pathway (Emergency, Urgent Care, Primary Care, Specialist, or Self-Care)
 - Sees estimated wait times and next steps
 
----
-
-### Persona: Triage Nurse (Sarah Okafor)
-
-Sarah is a triage nurse managing patient flow at a busy regional clinic. She reviews 40+ patients per shift and needs to quickly identify who needs immediate attention.
-
-**Intake Review:**
-- Reviews AI-extracted clinical entities with confidence scores
-- Sees structured data (symptoms, conditions, medications) pulled from conversational text
-- Validates urgency assessments against her clinical judgment
-
-**Decision-Making and Routing:**
-- Approves straightforward triage decisions that align with clinical guidelines
-- Flags edge cases where the AI's confidence is low or manual review is needed
-- Documents reasoning for every triage decision to support audits
-
-**Compliance and Quality:**
-- Ensures consistent application of triage protocols across all patients
-- Maintains audit-ready records for regulatory review
-- Balances speed with accuracy under high patient volume
-
----
 
 ## Architecture
 
@@ -152,17 +130,6 @@ npm run build
 npm run deploy
 ```
 
----
-
-## Development with Kiro
-
-This project was built using [Kiro](https://kiro.dev), an AI-powered IDE that uses structured specs to drive development. The `.kiro/specs/` directory contains the requirements, design documents, and implementation tasks that guided the build:
-
-- **ai-care-coordinator** — Core pipeline (conversation, extraction, triage, routing)
-- **aws-deployment** — CDK infrastructure and deployment
-- **bedrock-conversational-engine** — Amazon Bedrock integration for patient conversations
-
----
 
 ## License
 
