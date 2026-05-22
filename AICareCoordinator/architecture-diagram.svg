@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 850" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+    <linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#232F3E"/>
+      <stop offset="100%" stop-color="#37475A"/>
+    </linearGradient>
+    <linearGradient id="awsGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF9900"/>
+      <stop offset="100%" stop-color="#EC7211"/>
+    </linearGradient>
+    <linearGradient id="agentGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2A3F5F"/>
+      <stop offset="100%" stop-color="#1A2940"/>
+    </linearGradient>
+    <linearGradient id="coreGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF9900"/>
+      <stop offset="100%" stop-color="#EC7211"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+    <marker id="arrowOrange" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#FF9900"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1100" height="850" rx="12" fill="#F8F9FA"/>
+
+  <!-- Title bar -->
+  <rect width="1100" height="52" rx="12" fill="url(#headerGrad)"/>
+  <rect y="40" width="1100" height="12" fill="url(#headerGrad)"/>
+  <text x="550" y="33" text-anchor="middle" fill="white" font-size="18" font-weight="600">AI Care Coordinator — Powered by Amazon Bedrock AgentCore</text>
+
+
+  <!-- ==================== USER ==================== -->
+  <circle cx="80" cy="110" r="18" fill="#5F6368" opacity="0.9"/>
+  <text x="80" y="115" text-anchor="middle" fill="white" font-size="14">👤</text>
+  <text x="80" y="148" text-anchor="middle" fill="#5F6368" font-size="12" font-weight="600">Patient</text>
+
+  <line x1="110" y1="115" x2="165" y2="115" stroke="#666" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="138" y="108" text-anchor="middle" fill="#888" font-size="9">HTTPS</text>
+
+  <!-- ==================== FRONTEND ==================== -->
+  <rect x="170" y="80" width="200" height="70" rx="8" fill="white" stroke="#E0E0E0" stroke-width="1" filter="url(#shadow)"/>
+  <text x="180" y="97" fill="#5F6368" font-size="9" font-weight="600" letter-spacing="1">FRONTEND</text>
+  <rect x="185" y="105" width="80" height="36" rx="5" fill="url(#awsGrad)"/>
+  <text x="225" y="120" text-anchor="middle" fill="white" font-size="10" font-weight="600">CloudFront</text>
+  <text x="225" y="132" text-anchor="middle" fill="white" font-size="8" opacity="0.85">CDN</text>
+  <rect x="275" y="105" width="80" height="36" rx="5" fill="url(#awsGrad)"/>
+  <text x="315" y="120" text-anchor="middle" fill="white" font-size="10" font-weight="600">S3</text>
+  <text x="315" y="132" text-anchor="middle" fill="white" font-size="8" opacity="0.85">React SPA</text>
+
+  <line x1="270" y1="153" x2="270" y2="185" stroke="#666" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ==================== AGENTCORE RUNTIME + GATEWAY ==================== -->
+  <rect x="170" y="190" width="200" height="70" rx="8" fill="white" stroke="#FF9900" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="180" y="207" fill="#E65100" font-size="9" font-weight="700" letter-spacing="1">AGENTCORE</text>
+  <rect x="185" y="215" width="80" height="36" rx="5" fill="url(#coreGrad)"/>
+  <text x="225" y="230" text-anchor="middle" fill="white" font-size="9" font-weight="600">Runtime</text>
+  <text x="225" y="242" text-anchor="middle" fill="white" font-size="8" opacity="0.85">Agent Hosting</text>
+  <rect x="275" y="215" width="80" height="36" rx="5" fill="url(#coreGrad)"/>
+  <text x="315" y="230" text-anchor="middle" fill="white" font-size="9" font-weight="600">Gateway</text>
+  <text x="315" y="242" text-anchor="middle" fill="white" font-size="8" opacity="0.85">MCP Tools</text>
+
+  <line x1="270" y1="263" x2="270" y2="295" stroke="#FF9900" stroke-width="1.5" marker-end="url(#arrowOrange)"/>
+
+  <!-- ==================== SPECIALIZED AGENTS ==================== -->
+  <rect x="40" y="300" width="720" height="180" rx="10" fill="#1A1F2E" stroke="#FF9900" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="55" y="322" fill="#FF9900" font-size="10" font-weight="700" letter-spacing="2">SPECIALIZED AGENTS ON AGENTCORE RUNTIME</text>
+
+  <!-- Agent 1: Intake -->
+  <rect x="60" y="340" width="155" height="120" rx="8" fill="url(#agentGrad)" stroke="#3A5F8F" stroke-width="1"/>
+  <circle cx="137" cy="333" r="12" fill="#FF9900"/>
+  <text x="137" y="337" text-anchor="middle" fill="white" font-size="10" font-weight="700">1</text>
+  <text x="137" y="370" text-anchor="middle" fill="white" font-size="20">🤖</text>
+  <text x="137" y="393" text-anchor="middle" fill="white" font-size="13" font-weight="600">Intake Agent</text>
+  <text x="137" y="412" text-anchor="middle" fill="#7EB8E0" font-size="9">Multi-turn conversation</text>
+  <text x="137" y="425" text-anchor="middle" fill="#7EB8E0" font-size="9">Symptom gathering</text>
+  <text x="137" y="448" text-anchor="middle" fill="#AAB7B8" font-size="8" font-style="italic">Bedrock Nova Lite</text>
+
+  <text x="228" y="400" text-anchor="middle" fill="#FF9900" font-size="24">→</text>
+
+  <!-- Agent 2: Extraction -->
+  <rect x="240" y="340" width="155" height="120" rx="8" fill="url(#agentGrad)" stroke="#3A5F8F" stroke-width="1"/>
+  <circle cx="317" cy="333" r="12" fill="#FF9900"/>
+  <text x="317" y="337" text-anchor="middle" fill="white" font-size="10" font-weight="700">2</text>
+  <text x="317" y="370" text-anchor="middle" fill="white" font-size="20">🔬</text>
+  <text x="317" y="393" text-anchor="middle" fill="white" font-size="13" font-weight="600">Extraction Agent</text>
+  <text x="317" y="412" text-anchor="middle" fill="#7EB8E0" font-size="9">Clinical NLP</text>
+  <text x="317" y="425" text-anchor="middle" fill="#7EB8E0" font-size="9">Entity recognition</text>
+  <text x="317" y="448" text-anchor="middle" fill="#AAB7B8" font-size="8" font-style="italic">Comprehend Medical</text>
+
+  <text x="408" y="400" text-anchor="middle" fill="#FF9900" font-size="24">→</text>
+
+  <!-- Agent 3: Triage -->
+  <rect x="420" y="340" width="155" height="120" rx="8" fill="url(#agentGrad)" stroke="#3A5F8F" stroke-width="1"/>
+  <circle cx="497" cy="333" r="12" fill="#FF9900"/>
+  <text x="497" y="337" text-anchor="middle" fill="white" font-size="10" font-weight="700">3</text>
+  <text x="497" y="370" text-anchor="middle" fill="white" font-size="20">⚕️</text>
+  <text x="497" y="393" text-anchor="middle" fill="white" font-size="13" font-weight="600">Triage Agent</text>
+  <text x="497" y="412" text-anchor="middle" fill="#7EB8E0" font-size="9">Urgency assessment</text>
+  <text x="497" y="425" text-anchor="middle" fill="#7EB8E0" font-size="9">Clinical reasoning</text>
+  <text x="497" y="448" text-anchor="middle" fill="#AAB7B8" font-size="8" font-style="italic">Rule-based + AI</text>
+
+  <text x="588" y="400" text-anchor="middle" fill="#FF9900" font-size="24">→</text>
+
+  <!-- Agent 4: Routing -->
+  <rect x="600" y="340" width="145" height="120" rx="8" fill="url(#agentGrad)" stroke="#3A5F8F" stroke-width="1"/>
+  <circle cx="672" cy="333" r="12" fill="#FF9900"/>
+  <text x="672" y="337" text-anchor="middle" fill="white" font-size="10" font-weight="700">4</text>
+  <text x="672" y="370" text-anchor="middle" fill="white" font-size="20">🏥</text>
+  <text x="672" y="393" text-anchor="middle" fill="white" font-size="13" font-weight="600">Routing Agent</text>
+  <text x="672" y="412" text-anchor="middle" fill="#7EB8E0" font-size="9">Care pathway</text>
+  <text x="672" y="425" text-anchor="middle" fill="#7EB8E0" font-size="9">Recommendation</text>
+  <text x="672" y="448" text-anchor="middle" fill="#AAB7B8" font-size="8" font-style="italic">Pathway mapping</text>
+
+  <!-- ==================== AGENTCORE SERVICES ==================== -->
+  <rect x="40" y="500" width="720" height="65" rx="8" fill="#FFF3E0" stroke="#FFB74D" stroke-width="1"/>
+  <text x="55" y="518" fill="#E65100" font-size="9" font-weight="700" letter-spacing="2">AGENTCORE SERVICES</text>
+
+  <rect x="55" y="528" width="120" height="26" rx="4" fill="white" stroke="#FFB74D" stroke-width="1"/>
+  <text x="115" y="545" text-anchor="middle" fill="#E65100" font-size="10" font-weight="600">Memory</text>
+
+  <rect x="190" y="528" width="120" height="26" rx="4" fill="white" stroke="#FFB74D" stroke-width="1"/>
+  <text x="250" y="545" text-anchor="middle" fill="#E65100" font-size="10" font-weight="600">Identity</text>
+
+  <rect x="325" y="528" width="120" height="26" rx="4" fill="white" stroke="#FFB74D" stroke-width="1"/>
+  <text x="385" y="545" text-anchor="middle" fill="#E65100" font-size="10" font-weight="600">Observability</text>
+
+  <rect x="460" y="528" width="140" height="26" rx="4" fill="white" stroke="#FFB74D" stroke-width="1"/>
+  <text x="530" y="545" text-anchor="middle" fill="#E65100" font-size="10" font-weight="600">Code Interpreter</text>
+
+  <rect x="615" y="528" width="120" height="26" rx="4" fill="white" stroke="#FFB74D" stroke-width="1"/>
+  <text x="675" y="545" text-anchor="middle" fill="#E65100" font-size="10" font-weight="600">Browser</text>
+
+  <!-- ==================== AWS SERVICES (right side) ==================== -->
+  <rect x="810" y="80" width="260" height="485" rx="10" fill="white" stroke="#E0E0E0" stroke-width="1" filter="url(#shadow)"/>
+  <text x="820" y="100" fill="#5F6368" font-size="10" font-weight="600" letter-spacing="1">AWS SERVICES</text>
+
+  <rect x="830" y="115" width="220" height="55" rx="6" fill="url(#awsGrad)"/>
+  <text x="940" y="140" text-anchor="middle" fill="white" font-size="12" font-weight="600">Amazon Bedrock</text>
+  <text x="940" y="155" text-anchor="middle" fill="white" font-size="9" opacity="0.85">Nova Lite (Converse API)</text>
+
+  <rect x="830" y="185" width="220" height="55" rx="6" fill="url(#awsGrad)"/>
+  <text x="940" y="210" text-anchor="middle" fill="white" font-size="12" font-weight="600">Comprehend Medical</text>
+  <text x="940" y="225" text-anchor="middle" fill="white" font-size="9" opacity="0.85">DetectEntitiesV2</text>
+
+  <rect x="830" y="255" width="220" height="55" rx="6" fill="url(#awsGrad)"/>
+  <text x="940" y="280" text-anchor="middle" fill="white" font-size="12" font-weight="600">DynamoDB</text>
+  <text x="940" y="295" text-anchor="middle" fill="white" font-size="9" opacity="0.85">PatientRecords Table</text>
+
+  <!-- Connections: Agents → AWS Services -->
+  <line x1="760" y1="380" x2="825" y2="142" stroke="#FF9900" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrowOrange)"/>
+  <line x1="760" y1="400" x2="825" y2="212" stroke="#FF9900" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrowOrange)"/>
+  <line x1="760" y1="420" x2="825" y2="282" stroke="#FF9900" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrowOrange)"/>
+
+  <!-- API Endpoints -->
+  <rect x="830" y="330" width="220" height="120" rx="6" fill="#F5F5F5" stroke="#E0E0E0" stroke-width="1"/>
+  <text x="940" y="350" text-anchor="middle" fill="#5F6368" font-size="10" font-weight="600">AGENT TOOLS (via MCP)</text>
+  <text x="842" y="370" fill="#333" font-size="9" font-family="monospace">initConversation()</text>
+  <text x="842" y="385" fill="#333" font-size="9" font-family="monospace">extractEntities()</text>
+  <text x="842" y="400" fill="#333" font-size="9" font-family="monospace">assessUrgency()</text>
+  <text x="842" y="415" fill="#333" font-size="9" font-family="monospace">routePatient()</text>
+  <text x="842" y="430" fill="#333" font-size="9" font-family="monospace">savePatientRecord()</text>
+
+  <!-- Tech stack -->
+  <rect x="830" y="465" width="220" height="88" rx="6" fill="#E8F5E9" stroke="#4CAF50" stroke-width="1"/>
+  <text x="940" y="487" text-anchor="middle" fill="#2E7D32" font-size="10" font-weight="600">TECH STACK</text>
+  <text x="940" y="505" text-anchor="middle" fill="#5F6368" font-size="9">TypeScript · Node.js 20</text>
+  <text x="940" y="520" text-anchor="middle" fill="#5F6368" font-size="9">AWS CDK · Vite · React</text>
+  <text x="940" y="535" text-anchor="middle" fill="#5F6368" font-size="9">AgentCore SDK · MCP</text>
+
+  <!-- ==================== TRIAGE LEVELS ==================== -->
+  <rect x="40" y="585" width="1030" height="95" rx="8" fill="white" stroke="#E0E0E0" stroke-width="1" filter="url(#shadow)"/>
+  <text x="55" y="605" fill="#5F6368" font-size="10" font-weight="600">TRIAGE LEVELS → CARE PATHWAYS</text>
+
+  <rect x="55" y="618" width="180" height="22" rx="4" fill="#D32F2F"/>
+  <text x="145" y="633" text-anchor="middle" fill="white" font-size="9" font-weight="600">🔴 Emergency → ED (Immediate)</text>
+
+  <rect x="250" y="618" width="180" height="22" rx="4" fill="#F57C00"/>
+  <text x="340" y="633" text-anchor="middle" fill="white" font-size="9" font-weight="600">🟠 Urgent → Urgent Care (1-2h)</text>
+
+  <rect x="445" y="618" width="180" height="22" rx="4" fill="#FBC02D"/>
+  <text x="535" y="633" text-anchor="middle" fill="#333" font-size="9" font-weight="600">🟡 Semi-Urgent → Primary (24-48h)</text>
+
+  <rect x="640" y="618" width="180" height="22" rx="4" fill="#388E3C"/>
+  <text x="730" y="633" text-anchor="middle" fill="white" font-size="9" font-weight="600">🟢 Non-Urgent → Specialist (1-2wk)</text>
+
+  <rect x="835" y="618" width="180" height="22" rx="4" fill="#1976D2"/>
+  <text x="925" y="633" text-anchor="middle" fill="white" font-size="9" font-weight="600">🔵 Self-Care → Home Guidance</text>
+
+  <text x="55" y="665" fill="#999" font-size="9" font-style="italic">Each agent reasons about its domain and hands off enriched PatientRecord to the next agent in the pipeline</text>
+
+  <!-- Footer -->
+  <text x="550" y="835" text-anchor="middle" fill="#999" font-size="10">AI Care Coordinator — Serverless Medical Intake &amp; Triage · Powered by Amazon Bedrock AgentCore</text>
+
+</svg>
